@@ -1,18 +1,21 @@
 """
-UCLA Women's Basketball RAG Analytics - Core Components
+UCLA Women's Basketball RAG Analytics - Core Package
 
-This package contains the core RAG (Retrieval-Augmented Generation) pipeline
-components for intelligent basketball statistics analysis.
+This package provides the core components for the RAG (Retrieval-Augmented Generation)
+pipeline that powers the basketball statistics chatbot.
 
-Modules:
-    rag_pipeline: Main orchestrator for the RAG process
-    entity_extractor: Natural language entity extraction 
-    query_generator: SQL query generation from natural language
-    db_connector: Thread-safe database operations
-    llm_utils: LLM integration utilities
+The pipeline works by:
+1. Extracting entities (players, stats, opponents) from natural language queries
+2. Generating SQLite-compatible SQL queries
+3. Executing queries against the basketball statistics database
+4. Converting results into natural language responses
 
-Author: Om
-Version: 1.0.0
+Main components:
+- rag_pipeline: Orchestrates the entire RAG process
+- entity_extractor: Identifies key information from user questions
+- query_generator: Converts questions into SQL queries
+- db_connector: Handles database operations safely
+- llm_utils: Manages the Claude AI model integration
 """
 
 __version__ = "1.0.0"

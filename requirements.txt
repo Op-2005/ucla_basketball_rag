@@ -1,6 +1,7 @@
 # Web Framework
 Flask==3.0.0
 Werkzeug==3.0.1
+flask-cors==4.0.0
 
 # Database
 sqlite3-fts4==1.0.3

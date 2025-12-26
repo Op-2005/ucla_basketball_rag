@@ -51,36 +51,53 @@ This application combines advanced Natural Language Processing with sports analy
    export FLASK_SECRET_KEY="your-secret-key"  # Optional
    ```
 
-5. **Run the application**
+5. **Run the backend**
    ```bash
    python app.py
    ```
+   Backend will start on `http://localhost:5001`
 
-6. **Open your browser**
-   Navigate to `http://localhost:5001`
+6. **Run the frontend** (in a new terminal)
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   Frontend will start on `http://localhost:8080` (or check terminal for actual port)
+
+7. **Open your browser**
+   Navigate to the React frontend URL (usually `http://localhost:8080`)
 
 ## 🏗️ Project Architecture
 
 ```
 ucla-basketball-rag/
-├── app.py                    # Flask web application
+├── app.py                    # Flask backend API server
 ├── src/                      # Core RAG pipeline components
 │   ├── rag_pipeline.py       # Main RAG orchestration
 │   ├── entity_extractor.py   # NLP entity extraction
 │   ├── query_generator.py    # SQL query generation
 │   ├── db_connector.py       # Database operations
 │   └── llm_utils.py          # LLM integration utilities
+├── frontend/                 # React frontend application
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   ├── context/          # State management
+│   │   ├── services/         # API service layer
+│   │   └── types/            # TypeScript types
+│   └── package.json          # Frontend dependencies
 ├── data/                     # Database and datasets
 │   ├── ucla_wbb.db           # SQLite database (402 records)
 │   └── uclawbb_season.csv    # Raw CSV data
-├── templates/                # HTML templates
-│   └── index.html            # Main chat interface
-├── static/                   # Frontend assets
-│   └── css/style.css         # Modern styling
+├── docs/                     # Documentation
+│   ├── INTEGRATION_GUIDE.md  # React integration guide
+│   ├── QUICK_START.md        # Quick start guide
+│   └── REACT_MIGRATION_PLAN.md # Migration documentation
 ├── tests/                    # Test suite
 │   └── test_app.py           # Application tests
 ├── logs/                     # Application logs (auto-created)
-├── requirements.txt          # Python dependencies
+├── requirements.txt           # Python dependencies
+├── run.sh / run.bat          # Startup scripts
 ├── .gitignore               # Git ignore rules
 └── README.md                # This file
 ```
