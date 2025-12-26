@@ -12,7 +12,7 @@ from thefuzz import process
 
 
 class EntityExtractor:
-    """Extracts and resolves entities from user queries."""
+    #Extracts and resolves entities from user queries
     
     def __init__(self, db_connector, llm_manager, table_name="ucla_player_stats"):
         """Initialize entity extractor.

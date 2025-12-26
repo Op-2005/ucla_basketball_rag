@@ -15,7 +15,7 @@ load_dotenv()
 
 
 class LLMManager:
-    """Manages Claude AI model for generating text responses."""
+    #Manages Claude AI model for generating text responses.
     
     def __init__(self, model_name=None, embedding_model="sentence-transformers/all-mpnet-base-v2"):
         """Initialize the Claude model and embeddings.

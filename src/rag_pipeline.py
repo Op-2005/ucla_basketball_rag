@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class RAGPipeline:
-    """Main RAG pipeline for processing basketball statistics queries."""
+    #Main RAG pipeline for processing basketball statistics queries.
     
     def __init__(self, llm_manager, db_connector, table_name="ucla_player_stats"):
         """Initialize the RAG pipeline.

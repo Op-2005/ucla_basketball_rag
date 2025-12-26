@@ -1,8 +1,8 @@
 """
 Database Connector - SQLite Operations
 
-Handles all database connections and query execution for the basketball statistics database.
-Provides thread-safe operations and basic query validation to prevent SQL injection.
+Handles all database connections and query execution for the basketball statistics database and 
+provides thread-safe operations and basic query validation to prevent SQL injection.
 """
 
 import sqlite3
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class DatabaseConnector:
-    """Manages SQLite database connections and query execution."""
+    #Manages SQLite database connections and query execution
     
     def __init__(self, db_path='data/ucla_wbb.db'):
         """Initialize database connector.
@@ -27,7 +27,7 @@ class DatabaseConnector:
         self.cursor = None
     
     def connect(self):
-        """Establish connection to the database."""
+        #Establish connection to the database
         try:
             self.conn = sqlite3.connect(self.db_path)
             self.cursor = self.conn.cursor()

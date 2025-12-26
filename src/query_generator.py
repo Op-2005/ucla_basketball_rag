@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class SQLQueryGenerator:
-    """Generates SQLite-compatible SQL queries from natural language."""
+    #Generates SQLite-compatible SQL queries from natural language.
     
     def __init__(self, llm_manager, db_connector, table_name="ucla_player_stats"):
         """Initialize query generator.
