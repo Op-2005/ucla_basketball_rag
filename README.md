@@ -294,8 +294,7 @@ ucla-basketball-rag/
 │   └── dist/                  # Production build (served by Flask)
 ├── data/                      # Database files
 │   ├── ucla_wbb.db            # SQLite database
-│   └── uclawbb_season.csv     # Raw CSV data
-├── docs/                      # Documentation
+│   └── uclawbb_season.csv     # Raw CSV data from WBB database
 ├── logs/                      # Application logs (auto-created)
 ├── requirements.txt           # Python dependencies
 ├── LICENSE                    # MIT License
